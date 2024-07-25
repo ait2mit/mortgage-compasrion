@@ -94,7 +94,7 @@ with col1:
 
     renewal_period_fixed = st.number_input('Mortgage RenewaL Period (years)', value=3.000, format="%.3f", key='renewal_period_fixed')
 
-    st.image("images/morrb.png", caption='Use your own judgement', use_column_width=True)
+    #st.image("images/morrb.png", caption='Use your own judgement', use_column_width=True)
 
 with col2:
     st.info("Variable Rate Mortgage")
@@ -136,11 +136,11 @@ if st.button('Compare'):
 
 
 
-    col1.write(f"Total Interest Paid (Fixed Rate): ${total_interest_fixed:,.3f}")
-    col1.write(f"Interest Paid in Renewal Period(Fixed Rate): ${mort_period_interest_total_fixed:,.3f}")
+    col1.info(f"Total Interest Paid (Fixed Rate): ${total_interest_fixed:,.3f}")
+    col1.info(f"Interest Paid in Renewal Period(Fixed Rate): ${mort_period_interest_total_fixed:,.3f}")
 
-    col2.write(f"Total Interest Paid (Variable Rate): ${total_interest_variable:,.3f}")
-    col2.write(f"Interest Paid in Renewal Period (Variable Rate): ${mort_period_interest_total_variable:,.3f}")
+    col2.info(f"Total Interest Paid (Variable Rate): ${total_interest_variable:,.3f}")
+    col2.info(f"Interest Paid in Renewal Period (Variable Rate): ${mort_period_interest_total_variable:,.3f}")
 
 
     if total_interest_fixed > total_interest_variable:
